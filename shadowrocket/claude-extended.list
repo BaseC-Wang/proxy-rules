@@ -1,0 +1,27 @@
+# NAME: Claude Extended
+# UPDATED: 2026-07-20
+#
+# Load together with claude.list for Google sign-in, Claude Code plugin
+# metadata and release notes, Microsoft 365 add-ins and optional telemetry.
+#
+# SOURCES:
+# https://code.claude.com/docs/en/corporate-proxy
+# https://support.claude.com/en/articles/13189465
+# https://support.claude.com/en/articles/13945233
+# Claude Code client verified: 2.1.209
+#
+# DOMAIN: 7
+# TOTAL: 7
+
+# Google sign-in and Claude Code shared dependencies
+DOMAIN,accounts.google.com
+DOMAIN,raw.githubusercontent.com
+DOMAIN,storage.googleapis.com
+
+# Microsoft 365 add-ins
+DOMAIN,appsforoffice.microsoft.com
+DOMAIN,o1158394.ingest.us.sentry.io
+
+# Optional Claude Code operational telemetry
+DOMAIN,api.datadoghq.com
+DOMAIN,browser-intake-us5-datadoghq.com

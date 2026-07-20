@@ -1,0 +1,28 @@
+# NAME: Claude
+# UPDATED: 2026-07-20
+#
+# Core first-party rules for Claude web/mobile/desktop, Claude Code
+# web/CLI/IDE/desktop, Anthropic API/Console, updates, artifacts,
+# hosted MCP connectors, WebSocket bridges and live previews.
+# Shared and optional dependencies are in claude-extended.list.
+#
+# SOURCES:
+# https://code.claude.com/docs/en/corporate-proxy
+# https://code.claude.com/docs/en/desktop
+#
+# DOMAIN-SUFFIX: 6
+# TOTAL: 6
+
+# Anthropic API, Console, CDN, documentation and status
+DOMAIN-SUFFIX,anthropic.com
+
+# Claude web, mobile, desktop, Code, downloads and hosted MCP connectors
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+
+# Desktop live previews
+DOMAIN-SUFFIX,claude.app
+
+# Files, artifacts, WebSocket bridges and MCP content
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpcontent.com
