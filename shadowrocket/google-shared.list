@@ -1,0 +1,19 @@
+# NAME: Google Shared
+# UPDATED: 2026-11-26
+#
+# Load once alongside claude-extended.list or gemini-extended.list.
+# The selected policy applies to all requests to these Google hosts.
+#
+# SOURCES:
+# https://accounts.google.com/
+# https://code.claude.com/docs/en/corporate-proxy
+# https://antigravity.google/download
+#
+# DOMAIN: 2
+# TOTAL: 2
+
+# Google account sign-in
+DOMAIN,accounts.google.com
+
+# Google Cloud Storage downloads
+DOMAIN,storage.googleapis.com

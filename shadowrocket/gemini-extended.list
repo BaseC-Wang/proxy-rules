@@ -1,8 +1,9 @@
 # NAME: Gemini Extended
 # UPDATED: 2026-11-26
 #
-# Load together with gemini.list for Google sign-in, shared web assets,
-# Antigravity downloads and updates, and enterprise model and search APIs.
+# Load with gemini.list for OAuth, web assets, Antigravity updates,
+# and enterprise model and search APIs. Also load google-shared.list
+# for Google sign-in and Cloud Storage downloads.
 # Other Google products using these hosts will follow the same policy.
 #
 # SOURCES:
@@ -16,12 +17,11 @@
 # https://github.com/etrnkz/gemini-unofficial-api/blob/main/docs/protocol.md
 # https://support.google.com/gemini/thread/407841596
 #
-# DOMAIN: 71
+# DOMAIN: 69
 # DOMAIN-SUFFIX: 1
-# TOTAL: 72
+# TOTAL: 70
 
-# Google account sign-in and OAuth
-DOMAIN,accounts.google.com
+# Google OAuth
 DOMAIN,oauth2.googleapis.com
 
 # Shared scripts, fonts, images and Google API requests from the Gemini web app
@@ -44,7 +44,6 @@ DOMAIN-SUFFIX,scf.usercontent.goog
 DOMAIN,antigravity-cli-auto-updater-974169037036.us-central1.run.app
 DOMAIN,antigravity-hub-auto-updater-974169037036.us-central1.run.app
 DOMAIN,antigravity-ide-auto-updater-974169037036.us-central1.run.app
-DOMAIN,storage.googleapis.com
 DOMAIN,edgedl.me.gvt1.com
 
 # Antigravity enterprise orchestration (US, EU and mutual TLS)
