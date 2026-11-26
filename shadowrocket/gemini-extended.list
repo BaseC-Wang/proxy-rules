@@ -1,12 +1,13 @@
 # NAME: Gemini Extended
 # UPDATED: 2026-11-26
 #
-# Load with gemini.list for OAuth, web assets, Antigravity updates,
-# and enterprise model and search APIs. Also load google-shared.list
-# for Google sign-in and Cloud Storage downloads.
-# Other Google products using these hosts will follow the same policy.
+# Load with gemini.list and google-shared.list. The shared Google keyword
+# covers Google One subscriptions, payments, Google Play and Google APIs.
 #
 # SOURCES:
+# https://support.google.com/googleone/answer/16476811
+# https://support.google.com/googlepay/answer/7644008
+# https://support.google.com/googleplay/answer/9818348
 # https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/gemini-app-firewall-settings
 # https://docs.cloud.google.com/gemini/docs/codeassist/code-overview
 # https://antigravity.google/download
@@ -21,138 +22,12 @@
 # https://github.com/etrnkz/gemini-unofficial-api/blob/main/docs/protocol.md
 # https://support.google.com/gemini/thread/407841596
 #
-# DOMAIN: 100
+# DOMAIN: 1
 # DOMAIN-SUFFIX: 1
-# TOTAL: 101
+# TOTAL: 2
 
-# Google OAuth
-DOMAIN,oauth2.googleapis.com
-
-# Shared account and payment services used by Gemini Enterprise
-DOMAIN,accounts.googleapis.com
-DOMAIN,payments.cloud.google
-
-# Shared scripts, fonts, images and Google API requests from the Gemini web app
-DOMAIN,apis.google.com
-DOMAIN,fonts.googleapis.com
-DOMAIN,fonts.gstatic.com
-DOMAIN,lh3.googleusercontent.com
-DOMAIN,lh5.googleusercontent.com
-DOMAIN,ogs.google.com
-DOMAIN,ssl.gstatic.com
-DOMAIN,waa-pa.clients6.google.com
-DOMAIN,www.googleapis.com
-DOMAIN,www.gstatic.com
-
-# Shared image and thumbnail hosts listed in the Gemini App firewall settings
-DOMAIN,lh3.google.com
-DOMAIN,encrypted-tbn0.gstatic.com
-DOMAIN,encrypted-tbn1.gstatic.com
-DOMAIN,encrypted-tbn2.gstatic.com
-DOMAIN,encrypted-tbn3.gstatic.com
-
-# Gemini attachment uploads and per-preview Canvas hosts
-DOMAIN,content-push.googleapis.com
+# Gemini Canvas preview hosts
 DOMAIN-SUFFIX,scf.usercontent.goog
 
-# Antigravity App, CLI and standalone IDE update checks and downloads
-DOMAIN,antigravity-cli-auto-updater-974169037036.us-central1.run.app
-DOMAIN,antigravity-hub-auto-updater-974169037036.us-central1.run.app
-DOMAIN,antigravity-ide-auto-updater-974169037036.us-central1.run.app
+# Antigravity standalone IDE installer CDN
 DOMAIN,edgedl.me.gvt1.com
-
-# Gemini Enterprise Business edition and Notebook Enterprise web entry points
-# Includes legacy redirects, workforce sign-in and notebooks embedded in enterprise search.
-DOMAIN,business.gemini.google
-DOMAIN,notebook.cloud.google.com
-DOMAIN,notebooklm.cloud.google.com
-DOMAIN,notebook.cloud.google
-DOMAIN,notebooklm.cloud.google
-DOMAIN,vertexaisearch.cloud.google.com
-
-# Workforce Identity Federation sign-in, callback and Gemini Enterprise landing page
-DOMAIN,auth.cloud.google
-DOMAIN,vertexaisearch.cloud.google
-
-# Antigravity enterprise orchestration (US, EU and mutual TLS)
-DOMAIN,businessaicode.us.rep.googleapis.com
-DOMAIN,businessaicode.eu.rep.googleapis.com
-DOMAIN,businessaicode.mtls.googleapis.com
-
-# Vertex AI model access (global, US, EU and mutual TLS)
-DOMAIN,aiplatform.googleapis.com
-DOMAIN,aiplatform.us.rep.googleapis.com
-DOMAIN,aiplatform.eu.rep.googleapis.com
-DOMAIN,aiplatform.mtls.googleapis.com
-
-# Vertex AI single-region REST endpoints used with a regional CLI location
-DOMAIN,africa-south1-aiplatform.googleapis.com
-DOMAIN,asia-east1-aiplatform.googleapis.com
-DOMAIN,asia-east2-aiplatform.googleapis.com
-DOMAIN,asia-northeast1-aiplatform.googleapis.com
-DOMAIN,asia-northeast2-aiplatform.googleapis.com
-DOMAIN,asia-northeast3-aiplatform.googleapis.com
-DOMAIN,asia-south1-aiplatform.googleapis.com
-DOMAIN,asia-south2-aiplatform.googleapis.com
-DOMAIN,asia-southeast1-aiplatform.googleapis.com
-DOMAIN,asia-southeast2-aiplatform.googleapis.com
-DOMAIN,australia-southeast1-aiplatform.googleapis.com
-DOMAIN,australia-southeast2-aiplatform.googleapis.com
-DOMAIN,europe-central2-aiplatform.googleapis.com
-DOMAIN,europe-north1-aiplatform.googleapis.com
-DOMAIN,europe-southwest1-aiplatform.googleapis.com
-DOMAIN,europe-west1-aiplatform.googleapis.com
-DOMAIN,europe-west2-aiplatform.googleapis.com
-DOMAIN,europe-west3-aiplatform.googleapis.com
-DOMAIN,europe-west4-aiplatform.googleapis.com
-DOMAIN,europe-west6-aiplatform.googleapis.com
-DOMAIN,europe-west8-aiplatform.googleapis.com
-DOMAIN,europe-west9-aiplatform.googleapis.com
-DOMAIN,europe-west12-aiplatform.googleapis.com
-DOMAIN,me-central1-aiplatform.googleapis.com
-DOMAIN,me-central2-aiplatform.googleapis.com
-DOMAIN,me-west1-aiplatform.googleapis.com
-DOMAIN,northamerica-northeast1-aiplatform.googleapis.com
-DOMAIN,northamerica-northeast2-aiplatform.googleapis.com
-DOMAIN,southamerica-east1-aiplatform.googleapis.com
-DOMAIN,southamerica-west1-aiplatform.googleapis.com
-DOMAIN,us-central1-aiplatform.googleapis.com
-DOMAIN,us-east1-aiplatform.googleapis.com
-DOMAIN,us-east4-aiplatform.googleapis.com
-DOMAIN,us-south1-aiplatform.googleapis.com
-DOMAIN,us-west1-aiplatform.googleapis.com
-DOMAIN,us-west2-aiplatform.googleapis.com
-DOMAIN,us-west3-aiplatform.googleapis.com
-DOMAIN,us-west4-aiplatform.googleapis.com
-DOMAIN,us-east5-aiplatform.googleapis.com
-
-# Discovery Engine for enterprise search (global, US, EU and mutual TLS)
-DOMAIN,discoveryengine.googleapis.com
-DOMAIN,global-discoveryengine.googleapis.com
-DOMAIN,us-discoveryengine.googleapis.com
-DOMAIN,eu-discoveryengine.googleapis.com
-DOMAIN,discoveryengine.mtls.googleapis.com
-DOMAIN,global-discoveryengine.mtls.googleapis.com
-DOMAIN,us-discoveryengine.mtls.googleapis.com
-DOMAIN,eu-discoveryengine.mtls.googleapis.com
-
-# Gemini Enterprise content API (explicit global and mutual TLS endpoints)
-DOMAIN,content-global-discoveryengine.googleapis.com
-DOMAIN,content-discoveryengine.mtls.googleapis.com
-DOMAIN,content-global-discoveryengine.mtls.googleapis.com
-DOMAIN,content-us-discoveryengine.mtls.googleapis.com
-DOMAIN,content-eu-discoveryengine.mtls.googleapis.com
-
-# Gemini Enterprise web app streaming (global, US and EU)
-DOMAIN,content-discoveryengine.googleapis.com
-DOMAIN,content-us-discoveryengine.googleapis.com
-DOMAIN,content-eu-discoveryengine.googleapis.com
-DOMAIN,content-webchannel-assistant-discoveryengine.googleapis.com
-DOMAIN,content-us-webchannel-assistant-discoveryengine.googleapis.com
-DOMAIN,content-eu-webchannel-assistant-discoveryengine.googleapis.com
-DOMAIN,discoveryengine.clients6.google.com
-DOMAIN,us-discoveryengine.clients6.google.com
-DOMAIN,eu-discoveryengine.clients6.google.com
-
-# Antigravity feedback
-DOMAIN,feedback-pa.googleapis.com

@@ -1,5 +1,5 @@
 # NAME: OpenAI
-# UPDATED: 2026-07-20
+# UPDATED: 2026-11-26
 #
 # Core rules for ChatGPT web/mobile/desktop, Codex web/app/CLI/IDE,
 # OpenAI API, authentication, uploads, static assets and WebSocket streaming.
@@ -8,12 +8,12 @@
 #
 # SOURCE: https://help.openai.com/en/articles/9247338
 #
-# DOMAIN: 8
-# DOMAIN-SUFFIX: 6
-# TOTAL: 14
+# DOMAIN: 7
+# DOMAIN-SUFFIX: 1
+# DOMAIN-KEYWORD: 5
+# TOTAL: 13
 
 # Authentication and application dependencies
-DOMAIN,cdn.openaimerge.com
 DOMAIN,cdn.workos.com
 DOMAIN,challenges.cloudflare.com
 DOMAIN,forwarder.workos.com
@@ -22,10 +22,12 @@ DOMAIN,images.workoscdn.com
 DOMAIN,setup.workos.com
 DOMAIN,workos.imgix.net
 
-# Core OpenAI, ChatGPT and Codex services
-DOMAIN-SUFFIX,chatgpt.com
+# Email links
 DOMAIN-SUFFIX,ct.sendgrid.net
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,oaistatsig.com
-DOMAIN-SUFFIX,openai.com
+
+# OpenAI, ChatGPT and product-specific asset hosts
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,oaistatic
+DOMAIN-KEYWORD,oaiusercontent
+DOMAIN-KEYWORD,oaistatsig
+DOMAIN-KEYWORD,openai
