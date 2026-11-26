@@ -9,22 +9,28 @@
 # https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/gemini-app-firewall-settings
 # https://github.com/Sophomoresty/gemini-web2api/issues/110
 # https://github.com/MetaCubeX/meta-rules-dat/issues/170
+# https://www.netify.ai/resources/applications/gemini
+# https://github.com/v2fly/domain-list-community/blob/master/data/google-deepmind
 # https://notebooklm.google.com/
 # https://developers.google.com/notebook/docs/sources
+# https://github.com/teng-lin/notebooklm-py/blob/main/docs/android/endpoints.md
 # https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/
 # https://ai.google.dev/api
+# https://ai.google.dev/gemini-api/docs/coding-agents
 # https://discuss.ai.google.dev/t/196921
 # https://geminicli.com/
+# https://github.com/google-gemini/gemini-cli/blob/main/packages/core/src/code_assist/oauth2.ts
 # https://docs.cloud.google.com/gemini/docs/codeassist/code-overview
 # https://antigravity.google/docs/enterprise/
 # https://docs.cloud.google.com/docs/security/compliance/deploy-antigravity-us-public-sector
 #
-# DOMAIN: 23
+# DOMAIN: 39
 # DOMAIN-SUFFIX: 2
-# TOTAL: 25
+# TOTAL: 41
 
 # Gemini and NotebookLM, including their legacy entry points
 DOMAIN,gemini.google.com
+DOMAIN,gemini.gstatic.com
 DOMAIN,gemini.google
 DOMAIN,bard.google.com
 DOMAIN,notebook.google.com
@@ -33,26 +39,47 @@ DOMAIN,notebook.google
 DOMAIN,notebooklm.google.com
 DOMAIN,notebooklm.google
 
-# Gemini web conversations and iOS WebChannel connections
+# NotebookLM client APIs and live audio
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+DOMAIN,labstailwind.pa.googleapis.com
+
+# Gemini web conversations and native clients
+DOMAIN,geminiweb-pa.clients.google.com
 DOMAIN,geminiweb-pa.clients6.google.com
+DOMAIN,geminiweb-pa.googleapis.com
+DOMAIN,robinfrontend-pa.googleapis.com
 DOMAIN,webchannel-robinfrontend-pa.googleapis.com
+
+# Gemini side panel in Google Workspace
+DOMAIN,appsgenaiserver-pa.clients.google.com
+DOMAIN,appsgenaiserver-pa.clients6.google.com
+DOMAIN,appsgenaiserver-pa.googleapis.com
 
 # AI Studio web client, developer documentation and Gemini API (HTTPS and WebSocket)
 DOMAIN,aistudio.google.com
 DOMAIN,ai.studio
 DOMAIN,makersuite.google.com
+DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
 DOMAIN,ai.google.dev
+DOMAIN,gemini-api-docs-mcp.dev
 DOMAIN,generativelanguage.googleapis.com
 
 # Gemini CLI, Code Assist and Antigravity client services
 DOMAIN,geminicli.com
+DOMAIN,codeassist.google.com
 DOMAIN,cloudaicompanion.googleapis.com
 DOMAIN,cloudcode-pa.googleapis.com
 DOMAIN,daily-cloudcode-pa.googleapis.com
 DOMAIN,aicode.googleapis.com
 DOMAIN,businessaicode.googleapis.com
 DOMAIN,antigravity-unleash.goog
+
+# Additional Antigravity API hosts listed by domain-list-community
+DOMAIN,antigravity-pa.googleapis.com
+DOMAIN,antigravity.googleapis.com
 
 # Antigravity product site, web app and client subdomains
 DOMAIN-SUFFIX,antigravity.google

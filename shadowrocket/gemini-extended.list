@@ -13,16 +13,24 @@
 # https://antigravity.google/docs/enterprise/
 # https://docs.cloud.google.com/docs/security/compliance/deploy-antigravity-us-public-sector
 # https://docs.cloud.google.com/vertex-ai/docs/reference/rest#service-endpoint
+# https://support.google.com/g/answer/16547037
+# https://docs.cloud.google.com/gemini/enterprise/docs/release-notes
+# https://docs.cloud.google.com/gemini/enterprise/docs/private-ui-access
+# https://docs.cloud.google.com/iam/docs/best-practices-workforce-identity-federation
 # https://github.com/jgunnink/antigravity-updater#how-it-works
 # https://github.com/etrnkz/gemini-unofficial-api/blob/main/docs/protocol.md
 # https://support.google.com/gemini/thread/407841596
 #
-# DOMAIN: 69
+# DOMAIN: 100
 # DOMAIN-SUFFIX: 1
-# TOTAL: 70
+# TOTAL: 101
 
 # Google OAuth
 DOMAIN,oauth2.googleapis.com
+
+# Shared account and payment services used by Gemini Enterprise
+DOMAIN,accounts.googleapis.com
+DOMAIN,payments.cloud.google
 
 # Shared scripts, fonts, images and Google API requests from the Gemini web app
 DOMAIN,apis.google.com
@@ -36,6 +44,13 @@ DOMAIN,waa-pa.clients6.google.com
 DOMAIN,www.googleapis.com
 DOMAIN,www.gstatic.com
 
+# Shared image and thumbnail hosts listed in the Gemini App firewall settings
+DOMAIN,lh3.google.com
+DOMAIN,encrypted-tbn0.gstatic.com
+DOMAIN,encrypted-tbn1.gstatic.com
+DOMAIN,encrypted-tbn2.gstatic.com
+DOMAIN,encrypted-tbn3.gstatic.com
+
 # Gemini attachment uploads and per-preview Canvas hosts
 DOMAIN,content-push.googleapis.com
 DOMAIN-SUFFIX,scf.usercontent.goog
@@ -45,6 +60,19 @@ DOMAIN,antigravity-cli-auto-updater-974169037036.us-central1.run.app
 DOMAIN,antigravity-hub-auto-updater-974169037036.us-central1.run.app
 DOMAIN,antigravity-ide-auto-updater-974169037036.us-central1.run.app
 DOMAIN,edgedl.me.gvt1.com
+
+# Gemini Enterprise Business edition and Notebook Enterprise web entry points
+# Includes legacy redirects, workforce sign-in and notebooks embedded in enterprise search.
+DOMAIN,business.gemini.google
+DOMAIN,notebook.cloud.google.com
+DOMAIN,notebooklm.cloud.google.com
+DOMAIN,notebook.cloud.google
+DOMAIN,notebooklm.cloud.google
+DOMAIN,vertexaisearch.cloud.google.com
+
+# Workforce Identity Federation sign-in, callback and Gemini Enterprise landing page
+DOMAIN,auth.cloud.google
+DOMAIN,vertexaisearch.cloud.google
 
 # Antigravity enterprise orchestration (US, EU and mutual TLS)
 DOMAIN,businessaicode.us.rep.googleapis.com
@@ -100,11 +128,31 @@ DOMAIN,us-east5-aiplatform.googleapis.com
 
 # Discovery Engine for enterprise search (global, US, EU and mutual TLS)
 DOMAIN,discoveryengine.googleapis.com
+DOMAIN,global-discoveryengine.googleapis.com
 DOMAIN,us-discoveryengine.googleapis.com
 DOMAIN,eu-discoveryengine.googleapis.com
 DOMAIN,discoveryengine.mtls.googleapis.com
+DOMAIN,global-discoveryengine.mtls.googleapis.com
 DOMAIN,us-discoveryengine.mtls.googleapis.com
 DOMAIN,eu-discoveryengine.mtls.googleapis.com
+
+# Gemini Enterprise content API (explicit global and mutual TLS endpoints)
+DOMAIN,content-global-discoveryengine.googleapis.com
+DOMAIN,content-discoveryengine.mtls.googleapis.com
+DOMAIN,content-global-discoveryengine.mtls.googleapis.com
+DOMAIN,content-us-discoveryengine.mtls.googleapis.com
+DOMAIN,content-eu-discoveryengine.mtls.googleapis.com
+
+# Gemini Enterprise web app streaming (global, US and EU)
+DOMAIN,content-discoveryengine.googleapis.com
+DOMAIN,content-us-discoveryengine.googleapis.com
+DOMAIN,content-eu-discoveryengine.googleapis.com
+DOMAIN,content-webchannel-assistant-discoveryengine.googleapis.com
+DOMAIN,content-us-webchannel-assistant-discoveryengine.googleapis.com
+DOMAIN,content-eu-webchannel-assistant-discoveryengine.googleapis.com
+DOMAIN,discoveryengine.clients6.google.com
+DOMAIN,us-discoveryengine.clients6.google.com
+DOMAIN,eu-discoveryengine.clients6.google.com
 
 # Antigravity feedback
 DOMAIN,feedback-pa.googleapis.com
