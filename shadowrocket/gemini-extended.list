@@ -1,0 +1,111 @@
+# NAME: Gemini Extended
+# UPDATED: 2026-11-26
+#
+# Load together with gemini.list for Google sign-in, shared web assets,
+# Antigravity downloads and updates, and enterprise model and search APIs.
+# Other Google products using these hosts will follow the same policy.
+#
+# SOURCES:
+# https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/gemini-app-firewall-settings
+# https://docs.cloud.google.com/gemini/docs/codeassist/code-overview
+# https://antigravity.google/download
+# https://antigravity.google/docs/enterprise/
+# https://docs.cloud.google.com/docs/security/compliance/deploy-antigravity-us-public-sector
+# https://docs.cloud.google.com/vertex-ai/docs/reference/rest#service-endpoint
+# https://github.com/jgunnink/antigravity-updater#how-it-works
+# https://github.com/etrnkz/gemini-unofficial-api/blob/main/docs/protocol.md
+# https://support.google.com/gemini/thread/407841596
+#
+# DOMAIN: 71
+# DOMAIN-SUFFIX: 1
+# TOTAL: 72
+
+# Google account sign-in and OAuth
+DOMAIN,accounts.google.com
+DOMAIN,oauth2.googleapis.com
+
+# Shared scripts, fonts, images and Google API requests from the Gemini web app
+DOMAIN,apis.google.com
+DOMAIN,fonts.googleapis.com
+DOMAIN,fonts.gstatic.com
+DOMAIN,lh3.googleusercontent.com
+DOMAIN,lh5.googleusercontent.com
+DOMAIN,ogs.google.com
+DOMAIN,ssl.gstatic.com
+DOMAIN,waa-pa.clients6.google.com
+DOMAIN,www.googleapis.com
+DOMAIN,www.gstatic.com
+
+# Gemini attachment uploads and per-preview Canvas hosts
+DOMAIN,content-push.googleapis.com
+DOMAIN-SUFFIX,scf.usercontent.goog
+
+# Antigravity App, CLI and standalone IDE update checks and downloads
+DOMAIN,antigravity-cli-auto-updater-974169037036.us-central1.run.app
+DOMAIN,antigravity-hub-auto-updater-974169037036.us-central1.run.app
+DOMAIN,antigravity-ide-auto-updater-974169037036.us-central1.run.app
+DOMAIN,storage.googleapis.com
+DOMAIN,edgedl.me.gvt1.com
+
+# Antigravity enterprise orchestration (US, EU and mutual TLS)
+DOMAIN,businessaicode.us.rep.googleapis.com
+DOMAIN,businessaicode.eu.rep.googleapis.com
+DOMAIN,businessaicode.mtls.googleapis.com
+
+# Vertex AI model access (global, US, EU and mutual TLS)
+DOMAIN,aiplatform.googleapis.com
+DOMAIN,aiplatform.us.rep.googleapis.com
+DOMAIN,aiplatform.eu.rep.googleapis.com
+DOMAIN,aiplatform.mtls.googleapis.com
+
+# Vertex AI single-region REST endpoints used with a regional CLI location
+DOMAIN,africa-south1-aiplatform.googleapis.com
+DOMAIN,asia-east1-aiplatform.googleapis.com
+DOMAIN,asia-east2-aiplatform.googleapis.com
+DOMAIN,asia-northeast1-aiplatform.googleapis.com
+DOMAIN,asia-northeast2-aiplatform.googleapis.com
+DOMAIN,asia-northeast3-aiplatform.googleapis.com
+DOMAIN,asia-south1-aiplatform.googleapis.com
+DOMAIN,asia-south2-aiplatform.googleapis.com
+DOMAIN,asia-southeast1-aiplatform.googleapis.com
+DOMAIN,asia-southeast2-aiplatform.googleapis.com
+DOMAIN,australia-southeast1-aiplatform.googleapis.com
+DOMAIN,australia-southeast2-aiplatform.googleapis.com
+DOMAIN,europe-central2-aiplatform.googleapis.com
+DOMAIN,europe-north1-aiplatform.googleapis.com
+DOMAIN,europe-southwest1-aiplatform.googleapis.com
+DOMAIN,europe-west1-aiplatform.googleapis.com
+DOMAIN,europe-west2-aiplatform.googleapis.com
+DOMAIN,europe-west3-aiplatform.googleapis.com
+DOMAIN,europe-west4-aiplatform.googleapis.com
+DOMAIN,europe-west6-aiplatform.googleapis.com
+DOMAIN,europe-west8-aiplatform.googleapis.com
+DOMAIN,europe-west9-aiplatform.googleapis.com
+DOMAIN,europe-west12-aiplatform.googleapis.com
+DOMAIN,me-central1-aiplatform.googleapis.com
+DOMAIN,me-central2-aiplatform.googleapis.com
+DOMAIN,me-west1-aiplatform.googleapis.com
+DOMAIN,northamerica-northeast1-aiplatform.googleapis.com
+DOMAIN,northamerica-northeast2-aiplatform.googleapis.com
+DOMAIN,southamerica-east1-aiplatform.googleapis.com
+DOMAIN,southamerica-west1-aiplatform.googleapis.com
+DOMAIN,us-central1-aiplatform.googleapis.com
+DOMAIN,us-east1-aiplatform.googleapis.com
+DOMAIN,us-east4-aiplatform.googleapis.com
+DOMAIN,us-south1-aiplatform.googleapis.com
+DOMAIN,us-west1-aiplatform.googleapis.com
+DOMAIN,us-west2-aiplatform.googleapis.com
+DOMAIN,us-west3-aiplatform.googleapis.com
+DOMAIN,us-west4-aiplatform.googleapis.com
+DOMAIN,us-east5-aiplatform.googleapis.com
+
+# Discovery Engine for enterprise search (global, US, EU and mutual TLS)
+DOMAIN,discoveryengine.googleapis.com
+DOMAIN,us-discoveryengine.googleapis.com
+DOMAIN,eu-discoveryengine.googleapis.com
+DOMAIN,discoveryengine.mtls.googleapis.com
+DOMAIN,us-discoveryengine.mtls.googleapis.com
+DOMAIN,eu-discoveryengine.mtls.googleapis.com
+
+# Antigravity feedback
+DOMAIN,feedback-pa.googleapis.com
